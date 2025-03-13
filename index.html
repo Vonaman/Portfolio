@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="fr" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loïs MARTEEL - Portfolio</title>
+    <link rel="shortcut icon" href="assets/Mono_blanc.svg" type="image/x-icon">
+    <link rel="stylesheet" href="src/style.css">
+    <link href="src/output.css" rel="stylesheet">
+
+</head>
+<body class="overflow-hidden overflow-x-hidden flex flex-col justify-normal items-center bg-bleu-clair">
+
+    <div class="flex flex-row justify-between items-center w-full fixed z-50">
+        <img src="assets/Monagramme.svg" class="w-24 h-24 ml-5 z-50" alt="Logo de Loïs MARTEEL">
+        <!-- Hidden Checkbox to Control Menu -->
+        <div>
+            <input type="checkbox" id="burger-toggle" class="hidden">
+
+            <!-- Burger Icon -->
+            <label for="burger-toggle" class="fixed top-5 right-5 z-50 flex flex-col justify-between w-10 h-8 p-2 rounded-3xl bg-bleu-fonce backdrop-blur-md shadow-lg cursor-pointer hover:scale-110 duration-300">
+                <div class="w-full h-0.5 bg-bleu rounded transition-transform origin-center"></div>
+                <div class="w-full h-0.5 bg-bleu rounded transition-opacity"></div>
+                <div class="w-full h-0.5 bg-bleu rounded transition-transform origin-center"></div>
+            </label>
+            <!-- Navigation Menu -->
+            <nav class="fixed z-40 top-0 right-[-300px] w-72 h-full bg-gradient-to-br from-bleu to-bleu-fonce text-white shadow-lg transition-all duration-500 ease-in-out p-20 overflow-y-auto flex flex-col justify-evenly">
+                <ul class="space-y-4">
+                    <li><a href="#propos" class="block p-3 font-medium text-bleu-clair duration-500 hover:text-jaune">A propos</a></li>
+                    <li><a href="#projets" class="block p-3 font-medium text-bleu-clair duration-500 hover:text-jaune">Projet</a></li>
+                    <li><a href="#expériences" class="block p-3 font-medium text-bleu-clair duration-500 hover:text-jaune">Expérience</a></li>
+                </ul>
+                <a href="assets/CV_Loïs_MARTEEL.pdf" class="bg-bleu rounded-full p-2 w-max h-auto hover:cursor-pointer hover:bg-jaune hover:text-bleu-fonce duration-500 hover:scale-110" target="_blank">Téléchargez mon CV !</a>
+                <div class="flex flex-row flex-wrap justify-between items-center gap-8 w-full">
+                    <a href="mailto:marteellois@gmail.com" target="_blank">
+                        <img src="assets/communication.png" alt="Gmail Loïs MARTEEL" class="h-auto w-12 hover:scale-125 duration-500">
+                    </a>
+                    <a href="https://www.linkedin.com/in/lo%C3%AFs-marteel-d%C3%A9veloppeur/" target="_blank">
+                        <img src="assets/techno/LinkedIn.svg" alt="LinkedIn de Loïs MARTEEL" class="h-12 w-auto hover:scale-125 duration-500">
+                    </a>
+                    <a href="https://github.com/Vonaman" target="_blank">
+                        <img src="assets/techno/github-logo.png" class="w-12 h-auto hover:scale-125 duration-500" alt="Github de Loïs MARTEEL">
+                    </a>
+                </div>
+            </nav>
+        </div>
+    </div>
+    
+    
+    <div class="flex flex-col justify-normal items-center w-full h-auto m-24 mb-64 pt-24 gap-24">
+        <div class="container">
+            <h1 class="font-titre font-black text-bleu-fonce">
+                <span>L</span>
+                <span>o</span>
+                <span>ï</span>
+                <span class="S">s</span>
+                <span>M</span>
+                <span>A</span>
+                <span>R</span>
+                <span>T</span>
+                <span>E</span>
+                <span>E</span>
+                <span>L</span>
+                
+            </h1>
+        </div>
+        <div class="flex flex-col gap-3 items-center w-1/3 text-center">
+            <h2 class="font-titre font-bold text-3xl hover:scale-125 duration-300">
+                Bienvenue sur mon portfolio !
+            </h2>
+            <p class="font-para font-medium text-lg">
+                Ici vous retrouverez tout mon parcours professionnel et mes projets que j'ai pu réaliser. Bonne visite !
+            </p>
+        </div>
+        <a href="#propos" id="btn-scroll" onclick="clickScroll()" class="font-titre font-bold bg-bleu text-bleu-clair rounded-full p-4 w-max h-auto hover:cursor-pointer hover:bg-jaune hover:text-bleu-fonce duration-500 hover:scale-110">
+            Commencer mon voyage
+        </a>
+    </div>
+    
+
+    <div class="flex flex-row justify-around items-center w-full h-auto bg-gradient-to-b from-bleu-clair to-bleu-fonce py-40" id="propos">
+        <div class="flex flex-col-reverse lg:flex-col items-start gap-5 w-1/3 h-auto opacity-0" id="propos-gauche">
+            <h2 class="font-titre font-bold text-4xl hover:scale-125 duration-300">
+                Qui suis-je ?
+            </h2>
+            <p class="font-para font-medium text-lg">
+                Je m'appelle Loïs MARTEEL, j'ai 19 ans et je suis étudiant en développement web à MyDigitalSchool Montpellier. Par la suite, je souhaite devenir développeur full-stack. <br>
+                Je suis à la recherche d'un stage pour le mois d'avril et d'une alternance pour septembre. <br>
+                N'hésitez pas à regarder mon CV et mes projets !
+            </p>
+        </div>
+        <img src="assets/moi-drogué.png" alt="Loïs MARTEEL" class="w-96 h-auto rounded-4xl drop-shadow-2xl shadow-bleu-clair z-0 hover:scale-110 duration-500 opacity-0" id="propos-droit">
+    </div>
+
+    <div class="flex flex-row justify-around items-center w-full h-auto bg-bleu-fonce py-40 overflow-x-hidden">
+        <div class="flex flex-row ustify-around items-center w-4/5 h-auto gap-32 carrousel" id="carrousel">
+            <img src="assets/techno/hmtl5-removebg-preview.png" class="w-24 h-auto" alt="Html5">
+            <img src="assets/techno/CSS3-removebg-preview.png" class="w-24 h-auto" alt="CSS3">
+            <img src="assets/techno/téléchargé-removebg-preview.png" class="w-24 h-auto" alt="JavaScript">
+            <img src="assets/techno/mysql.png" class="w-24 h-auto" alt="MySql">
+            <img src="assets/techno/PHP-logo.svg-removebg-preview.png" class="w-24 h-auto" alt="PHP">
+            <img src="assets/techno/Tailwind CSS.png" class="w-24 h-auto" alt="Tailwind Css">
+            <img src="assets/techno/Next.js.png" class="w-24 h-auto" alt="Next.js">
+            <img src="assets/techno/Symfony.png" class="w-24 h-auto" alt="Symfony">
+        </div>
+    </div>
+
+    <div class="flex flex-col justify-between items-start w-full h-auto bg-bleu-fonce py-40 gap-60 overflow-hidden" id="projets">
+
+        <h2 class="font-titre font-bold text-4xl hover:scale-125 text-bleu-clair duration-300 ml-44">
+            Mes projets
+        </h2>
+
+        <!-- Conteneur des cartes -->
+        <div class="flex flex-col justify-between items-center w-full h-auto">
+            <div class="flex flex-row justify-center items-center w-full h-auto gap-10 relative" id="carrousel">
+                <div class="content bg-white/10 backdrop-blur-2xl drop-shadow-2xl w-[60vw] h-[300px] rounded-4xl p-8 absolute flex flex-row justify-between items-center gap-24">
+                    <img src="assets/Photo/HBC_cavaillon.png" alt="HBC Cavaillon" class="w-auto h-60 rounded-4xl">
+                    <div class="flex flex-col justify-between items-start w-1/2 h-auto gap-8">
+                        <h3 class="font-titre font-bold text-2xl text-bleu-clair">HBC Cavaillon</h3>
+                        <p class="text-bleu-clair font-para font-medium text-lg">
+                            Création du site vitrine du club de handball HBC Cavaillon pendant un stage de deux mois avec un camarade.
+                        </p>
+                        <div class="flex flex-row justify-between items-center w-full">
+                            <div class="flex flex-row justify-normal">
+                                <img src="assets/techno/CSS3-removebg-preview.png" class="h-12 w-auto" alt="CSS3">
+                                <img src="assets/techno/hmtl5-removebg-preview.png" class="h-12 w-auto" alt="Html5">
+                            </div>
+                            <a href="http://handballcavaillon.free.fr/" class="font-para text-jaune underline decoration-jaune" target="_blank">Le site ici -></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="content bg-white/10 backdrop-blur-2xl drop-shadow-2xl w-[60vw] h-[300px] rounded-4xl p-8 absolute flex flex-row justify-between items-center gap-24">
+                    <img src="assets/Photo/Positionnement.png" alt="HBC Cavaillon" class="w-auto h-60 rounded-4xl">
+                    <div class="flex flex-col justify-between items-start w-1/2 h-auto gap-8">
+                        <h3 class="font-titre font-bold text-2xl text-bleu-clair">Test de positionnement</h3>
+                        <p class="text-bleu-clair font-para font-medium text-lg">
+                            Avec une camarade, j'ai réalisé un test de positionnement pour téléphone pour mon école, MyDigitalSchool.
+                        </p>
+                        <div class="flex flex-row justify-between items-center w-full">
+                            <div class="flex flex-row justify-normal">
+                                <img src="assets/techno/CSS3-removebg-preview.png" class="h-12 w-auto" alt="CSS3">
+                                <img src="assets/techno/hmtl5-removebg-preview.png" class="h-12 w-auto" alt="Html5">
+                                <img src="assets/techno/téléchargé-removebg-preview.png" class="h-12 w-auto" alt="JavaScript">
+                            </div>
+                            <a href="https://mydigitalschool-montpellier.github.io/Positionnement/" target="_blank" class="font-para text-jaune underline decoration-jaune">Le site ici -></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="content bg-white/10 backdrop-blur-2xl drop-shadow-2xl w-[60vw] h-[300px] rounded-4xl p-8 absolute flex flex-row justify-between items-center gap-24">
+                    <img src="assets/Photo/Handitalk.png" alt="HBC Cavaillon" class="w-auto h-60 rounded-4xl">
+                    <div class="flex flex-col justify-between items-start w-1/2 h-auto gap-8">
+                        <h3 class="font-titre font-bold text-2xl text-bleu-clair">HandiTalk</h3>
+                        <p class="text-bleu-clair font-para font-medium text-lg">
+                            Pour un projet fil rouge d'école, j'ai réalisé le site vitrine pour présenter notre application.
+                        </p>
+                        <div class="flex flex-row justify-between items-center w-full">
+                            <div class="flex flex-row justify-normal">
+                                <img src="assets/techno/CSS3-removebg-preview.png" class="h-12 w-auto" alt="CSS3">
+                                <img src="assets/techno/hmtl5-removebg-preview.png" class="h-12 w-auto" alt="Html5">
+                                <img src="assets/techno/Tailwind CSS.png" class="h-12 w-auto" alt="Tailwind Css">
+                            </div>
+                            <a href="https://vonaman.github.io/HandiTalk/" target="_blank" class="font-para text-jaune underline decoration-jaune">Le site ici -></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="content bg-white/10 backdrop-blur-2xl drop-shadow-2xl w-[60vw] h-[300px] rounded-4xl p-8 absolute flex flex-row justify-between items-center gap-24">
+                    <img src="assets/Photo/Timeless.png" alt="HBC Cavaillon" class="w-auto h-60 rounded-4xl">
+                    <div class="flex flex-col justify-between items-start w-1/2 h-auto gap-8">
+                        <h3 class="font-titre font-bold text-2xl text-bleu-clair">Timeless</h3>
+                        <p class="text-bleu-clair font-para font-medium text-lg">
+                            Réalisé avec deux camarades, nous avons créé un site fictif d'achat de montres de luxe, en partant de la maquette jusqu'au développement.
+                        </p>
+                        <div class="flex flex-row justify-between items-center w-full">
+                            <div class="flex flex-row justify-normal gap-4 w-1/2 flex-wrap">
+                                <img src="assets/techno/CSS3-removebg-preview.png" class="h-12 w-auto" alt="CSS3">
+                                <img src="assets/techno/hmtl5-removebg-preview.png" class="h-12 w-auto" alt="Html5">
+                                <img src="assets/techno/Sass_Logo_Color.svg.png" class="h-12 w-auto" alt="Sass">
+                                <img src="assets/techno/Bootstrap_logo.svg.png" class="h-12 w-auto" alt="Bootstrap">
+                                <img src="assets/techno/github-logo.png" class="h-12 w-auto" alt="Github">
+                            </div>
+                            <a href="https://github.com/Vonaman/Timeless" target="_blank" class="font-para text-jaune underline decoration-jaune">Le Github ici -></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="content bg-white/10 backdrop-blur-2xl drop-shadow-2xl w-[60vw] h-[300px] rounded-4xl p-8 absolute flex flex-row justify-between items-center gap-24">
+                    <img src="assets/Photo/HBC_cavaillon.png" alt="HBC Cavaillon" class="w-auto h-60 rounded-4xl">
+                    <div class="flex flex-col justify-between items-start w-1/2 h-auto gap-8">
+                        <h3 class="font-titre font-bold text-2xl text-bleu-clair">Tendify</h3>
+                        <p class="text-bleu-clair font-para font-medium text-lg">
+                            Pour un projet d'école, nous avons développé, avec deux camarades, une webapp permettant de créer des profils et d'y ajouter des cartes pour parler de nos derniers livres lus, films vus etc.
+                        </p>
+                        <div class="flex flex-row justify-between items-center w-full">
+                            <div class="flex flex-row justify-normal gap-4">
+                                <img src="assets/techno/Tailwind CSS.png" class="h-12 w-auto" alt="Tailwind">
+                                <img src="assets/techno/Symfony.png" class="h-12 w-auto" alt="Symfony">
+                                <img src="assets/techno/github-logo.png" class="h-12 w-auto" alt="Github">
+                                
+                            </div>
+                            <a href="https://github.com/maryloumtz/Tendify_new" target="_blank" class="font-para text-jaune underline decoration-jaune">Le Github ici -></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        
+            <!-- Boutons de navigation -->
+            <div class="flex flex-row justify-between items-center w-full h-auto p-16">
+                <button onclick="goLeft()" class="p-3 bg-bleu-clair rounded-2xl w-max hover:cursor-pointer hover:scale-110 duration-500"><p class="font-para font-medium text-sm text-bleu-fonce"> <- Précédent</p></button>
+                <button onclick="goRight()" class="p-3 bg-bleu-clair rounded-2xl w-max hover:cursor-pointer hover:scale-110 duration-500"><p class="font-para font-medium text-sm text-bleu-fonce"> Suivant -> </button>
+            </div>
+        </div>
+    </div>
+
+    <div class="flex flex-col justify-start items-start w-full h-auto bg-bleu-fonce gap-40 py-40" id="expériences">
+
+        <h2 class="font-titre font-bold text-4xl hover:scale-125 duration-300 text-bleu-clair ml-44">
+            Mes expériences
+        </h2>
+
+        <div class="flex flex-col justify-between items-center w-full gap-24">
+            <div class="flex flex-row justify-evenly items-center w-3/5 h-auto opacity-auto id="exp-gauche-1">
+                <img src="assets/Photo/vivarais.jpg" alt="Provence Vivarais" class="w-80 h-60 rounded-4xl">
+                <div class="flex flex-col justify-evenly items-start w-1/2 h-auto gap-8">
+                    <h3 class="font-titre font-bold text-2xl text-bleu-clair">Provence Vivarais</h3>
+                    <p class="font-para font-light text-sm text-bleu-clair">
+                        Été 2024
+                    </p>
+                    <p class="font-para font-medium text-lg text-bleu-clair">
+                        J'ai travaillé deux mois en temps qu'intérimaire dans la manutention chez Provefel. Ce travail m'a permis d'en apprendre plus sur la mentalité du travail à la chaîne.
+                    </p>
+                </div>
+            </div>
+
+            <div class="flex flex-row-reverse justify-evenly items-center w-3/5 h-auto opacity-0" id="exp-droite-1">
+                <img src="assets/Photo/logo_hbc_grand_sans_fond.png" alt="Logo Hbc Cavaillon" class="w-80 rounded-4xl">
+                <div class="flex flex-col justify-evenly items-start w-1/2 h-auto gap-8">
+                    <h3 class="font-titre font-bold text-2xl text-bleu-clair">HBC Cavaillon</h3>
+                    <p class="font-para font-light text-sm text-bleu-clair">
+                        Avril/Mai 2024
+                    </p>
+                    <p class="font-para font-medium text-lg text-bleu-clair">
+                        Comme expliqué dans mes projets, j'ai réalisé un stage avec un camarade pour refaire le site internet du club. Ce furent mes premiers pas dans le monde professionnel du développement web.
+                    </p>
+                </div>
+            </div>
+
+            <div class="flex flex-row justify-evenly items-center w-3/5 h-auto opacity-0" id="exp-gauche-2">
+                <img src="assets/Photo/PROVEFEL.png" alt="Provefel" class="w-80 h-60 rounded-4xl">
+                <div class="flex flex-col justify-evenly items-start w-1/2 h-auto gap-8">
+                    <h3 class="font-titre font-bold text-2xl text-bleu-clair">Provefel</h3>
+                    <p class="font-para font-light text-sm text-bleu-clair">
+                        Été 2022 - 2023
+                    </p>
+                    <p class="font-para font-medium text-lg text-bleu-clair">
+                        J'ai travaillé deux étés dans la petite entreprise Provefel, un grossiste de fruits et légumes. Ce furent mes premiers pas dans le monde professionnel et ce fut très enrichissant.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="flex flex-row justify-between items-center px-8 py-4 w-full h-auto bg-bleu-clair">
+        <div class="flex flex-row justify-normal items-center">
+            <div class="flex flex-row justify-between gap-8">
+                <ul class="flex flex-row justify-between items-center">
+                    <li><a href="#propos" class="block p-3 font-medium text-bleu-fonce duration-500 hover:text-jaune">A propos</a></li>
+                    <li><a href="#projets" class="block p-3 font-medium text-bleu-fonce duration-500 hover:text-jaune">Projet</a></li>
+                    <li><a href="#expériences" class="block p-3 font-medium text-bleu-fonce duration-500 hover:text-jaune">Expérience</a></li>
+                </ul>
+                <span class=" w-[2px] rounded-full bg-bleu-fonce"></span>
+                <div class="flex flex-row justify-between items-center gap-8">
+                    <a href="mailto:marteellois@gmail.com" target="_blank">
+                        <img src="assets/communication.png" alt="Gmail Loïs MARTEEL" class="h-8 w-auto hover:scale-125 duration-500">
+                    </a>
+                    <a href="https://www.linkedin.com/in/lo%C3%AFs-marteel-d%C3%A9veloppeur/" target="_blank">
+                        <img src="assets/techno/LinkedIn.svg" alt="LinkedIn de Loïs MARTEEL" class="h-8 w-auto hover:scale-125 duration-500">
+                    </a>
+                    <a href="https://github.com/Vonaman" target="_blank">
+                        <img src="assets/techno/github-logo.png" class="w-8 h-auto hover:scale-125 duration-500" alt="Github de Loïs MARTEEL">
+                    </a>
+                </div>
+            </div>
+        </div> 
+        <div class="flex flex-row justify-normal items-end gap-4">
+            <img src="assets/Monagramme.svg" alt="" class="h-8 w-auto hover:scale-125 duration-500">
+            <p class="font-para font-medium text-sm text-bleu-fonce">
+                Developed by Loïs MARTEEL
+            </p>
+        </div>
+    </footer>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+    <script src="src/main.js"></script>
+</body>
+</html>

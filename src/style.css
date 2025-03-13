@@ -1,0 +1,52 @@
+
+.container{
+    text-align: center;
+    perspective: 1000px;
+}
+
+h1{
+    transform-style:  preserve-3d;
+    display: inline-flex;
+    letter-spacing: 10px;
+    font-size: 90px;
+    cursor: pointer;
+}
+
+.S{
+    margin-right: 16px;
+}
+
+h1 span{
+    pointer-events: none;
+}
+
+/*Menu burger*/
+#burger-toggle:checked ~ label div:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+    background-color: #F5C26D;
+}
+
+#burger-toggle:checked ~ label div:nth-child(2) {
+    opacity: 0;
+}
+
+#burger-toggle:checked ~ label div:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+    background-color: #F5C26D;
+}
+
+#burger-toggle:checked ~ nav {
+    right: 0;
+}
+
+
+/* propos */
+#propos-gauche {
+    opacity: 0;
+    transform: translateX(-100px);
+}
+
+#propos-droit {
+    opacity: 0;
+    transform: translateX(100px);
+}
