@@ -155,39 +155,123 @@ anime({
 
 /*Projet */
 
-const cards = document.querySelectorAll("#carrousel .content");
-let currentIndex = 0; // L'index de la carte actuelle
+let currentIndex = 0;
+const cards = document.querySelectorAll('.content');
+const totalCards = cards.length;
 
 function updateCarrousel() {
-    anime({
-        targets: cards,
-        translateX: (el, i) => (i - currentIndex) * window.innerWidth * 0.8,
-        opacity: (el, i) => (i === currentIndex ? 1 : 0.5), // La carte centrale est bien visible
-        scale: (el, i) => (i === currentIndex ? 1 : 0.2), // La carte centrale est plus grande
-        easing: "easeInOutQuad",
-        duration: 600,
+    cards.forEach((card, index) => {
+        if (index === currentIndex) {
+            // Afficher uniquement la carte active
+            anime({
+                targets: card,
+                translateX: 0,
+                opacity: 1,
+                scale: 1,
+                zIndex: 10,
+                easing: "easeInOutQuad",
+                duration: 600
+            });
+        } else {
+            // Cacher complètement les autres cartes
+            // Les positionner hors écran mais du bon côté pour l'animation
+            const direction = index < currentIndex ? -1 : 1;
+            anime({
+                targets: card,
+                translateX: direction * window.innerWidth + 'px', // Complètement hors écran
+                opacity: 0,
+                scale: 0.8,
+                zIndex: 0,
+                easing: "easeInOutQuad",
+                duration: 600
+            });
+        }
     });
-}
-
-// Fait défiler vers la gauche
-window.goLeft = function () {
-  if (currentIndex > 0) {
-      currentIndex--;
-      updateCarrousel();
-  }
-};
-
-// Fait défiler vers la droite
-function goRight() {
-    if (currentIndex < cards.length - 1) {
-        currentIndex++;
-        updateCarrousel();
+    
+    // Ajuster la hauteur du conteneur
+    const activeCard = cards[currentIndex];
+    const container = document.getElementById('carrousel');
+    if (container && activeCard) {
+        anime({
+            targets: container,
+            height: activeCard.offsetHeight + 40 + 'px',
+            duration: 600,
+            easing: "easeInOutQuad"
+        });
     }
 }
 
-// Initialise le carrousel
-updateCarrousel();
+// Navigation à gauche avec boucle infinie
+window.goLeft = function() {
+    currentIndex = (currentIndex - 1 + totalCards) % totalCards;
+    
+    // Préparer la carte qui va apparaître
+    const newActiveCard = cards[currentIndex];
+    newActiveCard.style.transform = 'translateX(-100%)';
+    newActiveCard.style.opacity = '0';
+    newActiveCard.style.zIndex = '5';
+    
+    // Petite pause pour permettre au navigateur d'appliquer ces styles
+    setTimeout(() => {
+        updateCarrousel();
+    }, 10);
+};
 
+// Navigation à droite avec boucle infinie
+window.goRight = function() {
+    currentIndex = (currentIndex + 1) % totalCards;
+    
+    // Préparer la carte qui va apparaître
+    const newActiveCard = cards[currentIndex];
+    newActiveCard.style.transform = 'translateX(100%)';
+    newActiveCard.style.opacity = '0';
+    newActiveCard.style.zIndex = '5';
+    
+    // Petite pause pour permettre au navigateur d'appliquer ces styles
+    setTimeout(() => {
+        updateCarrousel();
+    }, 10);
+};
+
+// Initialiser le carrousel
+document.addEventListener('DOMContentLoaded', function() {
+    // Cacher toutes les cartes sauf la première
+    cards.forEach((card, index) => {
+        if (index !== 0) {
+            card.style.opacity = '0';
+            card.style.transform = 'translateX(100%)';
+            card.style.zIndex = '0';
+        } else {
+            card.style.opacity = '1';
+            card.style.transform = 'translateX(0)';
+            card.style.zIndex = '10';
+        }
+    });
+    
+    // Positionnement initial
+    updateCarrousel();
+    
+    // Gestion des événements tactiles
+    let touchStartX = 0;
+    const carousel = document.getElementById('carrousel');
+    
+    carousel.addEventListener('touchstart', e => {
+        touchStartX = e.changedTouches[0].screenX;
+    });
+    
+    carousel.addEventListener('touchend', e => {
+        const touchEndX = e.changedTouches[0].screenX;
+        const diff = touchStartX - touchEndX;
+        
+        if (Math.abs(diff) > 50) { // Seuil de sensibilité
+            if (diff > 0) {
+                window.goRight();
+            } else {
+                window.goLeft();
+            }
+        }
+    });
+});
 
 /* Experience 1*/
 
