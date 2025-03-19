@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="fr" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Artcile Provence Vivarais</title>
+    <link rel="shortcut icon" href="../assets/Mono_blanc.svg" type="image/x-icon">
+    <link rel="stylesheet" href="../src/style.css">
+    <link href="../src/output.css" rel="stylesheet">
+</head>
+<body class="overflow-x-hidden flex flex-col justify-normal items-center bg-bleu-fonce">
+
+    <!--Header-->
+    <div class="flex flex-row justify-between items-center w-full fixed z-50">
+        <a href="../index.html">
+            <img src="../assets/Monagramme.svg" class="w-16 h-16 lg:w-24 lg:h-24 ml-5 z-50" alt="Logo de Loïs MARTEEL">
+        </a>
+        <!-- Hidden Checkbox to Control Menu -->
+        <div>
+            <input type="checkbox" id="burger-toggle" class="hidden">
+
+            <!-- Burger Icon -->
+            <label for="burger-toggle" class="fixed top-5 right-5 z-50 flex flex-col justify-between w-10 h-8 p-2 rounded-3xl bg-bleu-fonce backdrop-blur-md shadow-lg cursor-pointer hover:scale-110 duration-300">
+                <div class="w-full h-0.5 bg-bleu rounded transition-transform origin-center"></div>
+                <div class="w-full h-0.5 bg-bleu rounded transition-opacity"></div>
+                <div class="w-full h-0.5 bg-bleu rounded transition-transform origin-center"></div>
+            </label>
+            <!-- Navigation Menu -->
+            <nav class="fixed z-40 top-0 right-[-300px] w-72 h-full bg-gradient-to-br from-bleu to-bleu-fonce text-white shadow-lg transition-all duration-500 ease-in-out p-20 overflow-y-auto flex flex-col justify-evenly">
+                <ul class="space-y-4">
+                    <li><a href="../index.html#propos" class="block p-3 font-medium text-bleu-clair duration-500 hover:text-jaune" target="_blank">A propos</a></li>
+                    <li><a href="../index.html#projets" class="block p-3 font-medium text-bleu-clair duration-500 hover:text-jaune" target="_blank">Projet</a></li>
+                    <li><a href="../index.html#expériences" class="block p-3 font-medium text-bleu-clair duration-500 hover:text-jaune" target="_blank">Expérience</a></li>
+                </ul>
+                <a href="../assets/CV_Loïs_MARTEEL.pdf" class="bg-bleu rounded-full p-2 w-max h-auto hover:cursor-pointer hover:bg-jaune hover:text-bleu-fonce duration-500 hover:scale-110" target="_blank">Téléchargez mon CV !</a>
+                <div class="flex flex-row flex-wrap justify-between items-center gap-8 w-full">
+                    <a href="mailto:marteellois@gmail.com" target="_blank">
+                        <img src="../assets/communication.png" alt="Gmail Loïs MARTEEL" class="h-auto w-12 hover:scale-125 duration-500">
+                    </a>
+                    <a href="https://www.linkedin.com/in/lo%C3%AFs-marteel-d%C3%A9veloppeur/" target="_blank">
+                        <img src="../assets/techno/LinkedIn.svg" alt="LinkedIn de Loïs MARTEEL" class="h-12 w-auto hover:scale-125 duration-500">
+                    </a>
+                    <a href="https://github.com/Vonaman" target="_blank">
+                        <img src="../assets/techno/github-logo.png" class="w-12 h-auto hover:scale-125 duration-500" alt="Github de Loïs MARTEEL">
+                    </a>
+                </div>
+            </nav>
+        </div>
+    </div>
+
+
+    <div class="flex flex-col justify-start items-center w-full md:w-[80%] h-auto px-[10%] py-48 gap-16 lg:gap-36">
+        <div class="flex flex-col md:flex-row justify-between items-start lg:items-center w-full h-auto">
+            <img src="../assets/Photo/vivarais.jpg" alt="Provence Vivarais" class="w-full max-w-xs md:w-80 h-auto md:h-60 rounded-2xl md:rounded-4xl mb-6 md:mb-0">
+            <h1 class="font-titre font-bold text-2xl md:text-3xl hover:scale-105 duration-300 text-bleu-clair w-full lg:w-1/2">
+                Provence Vivarais : Une expérience enrichissante en soft skills
+            </h1>
+        </div>
+        <div class="flex flex-col justify-between items-start w-full h-auto gap-16">
+            <p class="font-para font-medium text-sm lg:text-lg text-bleu-clair">
+                Travailler durant l'été est souvent une opportunité précieuse pour acquérir de nouvelles compétences. À l'été 2024, après la fin de mon stage, j'avais trois mois devant moi et j’ai décidé d’en consacrer deux à une expérience professionnelle intense chez Blachère, un grossiste en fruits et légumes. Cette expérience m’a permis d’acquérir de nouvelles compétences, tant sur le plan physique que mental, et de renforcer des soft skills essentielles pour ma carrière. <br> Voici les éléments que nous allons aborder :            </p>
+            <ul class="flex flex-col justify-start items-start w-full h-auto pl-8 gap-4">
+                <li class="list-disc text-bleu-clair duration-500 hover:text-jaune"><a href="#contexte" class="font-para font-medium text-sm lg:text-lg text-bleu-clair duration-500 hover:text-jaune">Contexte du travail</a></li>
+                <li class="list-disc text-bleu-clair duration-500 hover:text-jaune"><a href="" class="font-para font-medium text-sm lg:text-lg text-bleu-clair duration-500 hover:text-jaune">Mes missions chez Provence Vivarais</a></li>
+                <li class="list-disc text-bleu-clair duration-500 hover:text-jaune"><a href="" class="font-para font-medium text-sm lg:text-lg text-bleu-clair duration-500 hover:text-jaune">Mes compétences développées</a></li>
+            </ul>
+            <p class="font-para font-medium text-sm lg:text-lg text-bleu-clair">
+                Sans plus attendre, plongeons nous dans un monde qui m'a forgé et rendu plus grand ! 
+            </p>
+        </div>
+        <div class="flex flex-col justify-between items-center w-full h-auto gap-12" id="contexte">
+            <h2 class="font-titre font-bold text-lg md:text-2xl text-bleu-clair w-full">
+                Contexte du travail
+            </h2>
+            <p class="font-para font-medium text-sm lg:text-lg text-bleu-clair">
+                Peut-être connaissez-vous Marie Blachère, la chaîne de boulangeries, mais avant cela, Blachère est avant tout un grossiste de fruits et légumes. Leur mission est d'acheter des produits au meilleur prix pour les revendre avec une marge bénéficiaire. Mon oncle, qui travaille dans cette entreprise, est acheteur-vendeur : il négocie et revend les produits. Une fois les transactions effectuées, il faut assurer l'expédition des marchandises aux clients, et c'est là que j'interviens.
+            </p>
+        </div>
+
+
+        <div class="flex flex-col justify-between items-start w-full h-auto gap-16">
+            <h2 class="font-titre font-bold text-lg md:text-2xl text-bleu-clair w-full">
+                Organisation d'une journée type            
+            </h2>
+            <p class="font-para font-medium text-sm lg:text-lg text-bleu-clair">
+                Mes horaires étaient de 13h30 à 20h30, rythmés par trois vagues successives d'expédition, chacune suivant un processus bien défini :
+            </p>
+            <div class="flex flex-col lg:flex-row justify-start items-center gap-24">
+                <li class="list-disc text-bleu-clair font-para font-medium text-sm lg:text-lg">
+                    <strong>Les colis "Bastone" et les bananes :</strong> Ces colis de grande taille ont des caractéristiques particulières qui justifient leur priorité.  
+                </li>
+            </div>
+            <div class="flex flex-col lg:flex-row justify-start items-center gap-6 lg:gap-24">
+                <li class="list-disc text-bleu-clair font-para font-medium text-sm lg:text-lg">
+                    <strong>Les gros colis :</strong> Il s'agit, en général, de produits encombrants comme les melons, pastèques ou oignons. Une palette ne peut contenir que cinq colis de ce type (hors empilement en hauteur évidemment).    
+                </li>
+                <img src="../assets/article/Gros_colis.png" alt="Schéma de gros colis" class="lg:w-64 h-auto">
+            </div>
+            <div class="flex flex-col lg:flex-row justify-start items-center gap-6 lg:gap-24">
+                <li class="list-disc text-bleu-clair font-para font-medium text-sm lg:text-lg">
+                    <strong>Les petits colis :</strong> Deux fois plus petits que les gros colis, ils sont si nombreux que leur distribution aux différents magasins représente près de la moitié du temps d'une vague.
+                </li>
+                <img src="../assets/article/Petit_colis.png" alt="Schéma de petit colis" class="lg:w-64 h-auto">
+            </div>
+            <div class="flex flex-col lg:flex-row justify-start items-center gap-6 lg:gap-24">
+                <li class="list-disc text-bleu-clair font-para font-medium text-sm lg:text-lg">
+                    <strong>Les colis "Baby" :</strong> Ils sont intermédiaires en taille entre les gros et les petits colis et doivent être empilés par huit par étage sur une palette.
+                </li>
+                <img src="../assets/article/Baby_colis.png" alt="Schéma de baby colis" class="lg:w-64 h-auto">
+            </div>
+            <p class="font-para font-medium text-sm lg:text-lg text-bleu-clair">
+                Chaque vague dure entre 1h30 et 3h, et tant qu'elle n'est pas finalisée, aucune pause n'est permise. Nous étions une vingtaine d'intérimaires supervisés par cinq à six chefs. Le rythme de travail était intense, exigeant à la fois de la rapidité, de la précision et une résistance physique et mentale.   
+            </p>
+        </div>
+
+        <div class="flex flex-col justify-between items-start w-full h-auto gap-16">
+            <h2 class="font-titre font-bold text-lg md:text-2xl text-bleu-clair w-full">
+                Mes missions chez Provence Vivarais            
+            </h2>
+            <p class="text-bleu-clair font-para font-medium text-sm lg:text-lg">
+                Mon rôle principal était de m'assurer que les palettes de produits étaient correctement préparées et prêtes à être expédiées. Cela impliquait :
+            </p>
+            <ul class="flex flex-col justify-start items-start w-full h-auto pl-8 gap-4">
+                <li class="list-disc text-bleu-clair font-para font-medium text-sm lg:text-lg">La manutention des colis en respectant les consignes de rangement et d’optimisation de l’espace.</li>
+                <li class="list-disc text-bleu-clair font-para font-medium text-sm lg:text-lg">La répartition des produits selon les commandes des magasins.</li>
+                <li class="list-disc text-bleu-clair font-para font-medium text-sm lg:text-lg">La sécurisation des palettes avec un film plastique pour éviter toute chute pendant le transport.</li>
+                <li class="list-disc text-bleu-clair font-para font-medium text-sm lg:text-lg">Le respect des délais serrés et l’adaptation aux exigences des chefs d’équipe.</li>
+            </ul>
+            <p class="text-bleu-clair font-para font-medium text-sm lg:text-lg">
+                Ce travail, bien que simple en apparence, demandait une grande rigueur et une excellente gestion du stress pour suivre le rythme imposé par l’entrepôt.
+            </p>
+        </div>
+        <div class="flex flex-col justify-between items-start w-full h-auto gap-16">
+            <h2 class="font-titre font-bold text-lg md:text-2xl text-bleu-clair w-full">
+                Les compétences développées           
+            </h2>
+            <div class="flex flex-col justify-start items-start gap-8">
+                <h3 class="font-titre font-bold text-md md:text-lg text-bleu-clair w-full">
+                    1 - Patience et gestion du stress
+                </h3>
+                <p class="text-bleu-clair font-para font-medium text-sm lg:text-lg">
+                    Face à un travail répétitif et à une pression constante, j'ai appris à garder mon calme et à rester concentré, m'assurant que chaque tâche était effectuée avec précision sans me laisser distraire par les tensions ambiantes.
+                </p>
+            </div>
+            <div class="flex flex-col justify-start items-start gap-8">
+                <h3 class="font-titre font-bold text-md md:text-lg text-bleu-clair w-full">
+                    2 - Persévérance et soif d'apprentissage
+                </h3>
+                <p class="text-bleu-clair font-para font-medium text-sm lg:text-lg">
+                    Dès les premiers jours, la cadence était épuisante. Mais au lieu de me laisser submerger, j'ai persisté, cherchant à m'améliorer constamment. Ce n'était pas si différent de mes projets de développement ou des jeux vidéo où l'on répète encore et encore pour s'améliorer. Avec le temps, j'ai acquis des automatismes et suis devenu plus efficace.
+                </p>
+            </div>
+            <div class="flex flex-col justify-start items-start gap-8">
+                <h3 class="font-titre font-bold text-md md:text-lg text-bleu-clair w-full">
+                    3 - Autonomie et prise d'initiative
+                </h3>
+                <p class="text-bleu-clair font-para font-medium text-sm lg:text-lg">
+                    En arrivant, je ne connaissais rien aux méthodes de l'entreprise et dépendais beaucoup des autres. Rapidement, j'ai gagné en indépendance. J'ai appris à exécuter mes tâches sans assistance constante, un état d'esprit que je compte bien conserver et renforcer dans mes futurs projets.
+                </p>
+            </div>
+        </div>
+        <div class="flex flex-col justify-between items-start w-full h-auto gap-16">
+            <p class="text-bleu-clair font-para font-medium text-lg lg:text-2xl">
+                Travailler chez Blachère a été une expérience intense et enrichissante. Au-delà de la rigueur physique et mentale, j'en ressors avec un bagage de compétences transversales précieuses : patience, persévérance, autonomie et gestion du stress. <br><br> Que ce soit dans le domaine du développement web ou ailleurs, ces compétences me serviront tout au long de ma carrière. Car si j'ai bien appris une chose cet été, c'est que peu importe le domaine, celui qui apprend à s'adapter et à persévérer finira toujours par progresser.
+            </p>
+        </div>
+    </div>
+
+
+
+    <!--Footer-->
+    <footer class="flex flex-col lg:flex-row justify-between items-center gap-8 md:gap-0 px-8 py-4 w-full h-auto bg-bleu-clair">
+        <div class="flex flex-row justify-normal items-center">
+            <div class="flex flex-col md:flex-row justify-between gap-0 md:gap-8">
+                <ul class="flex flex-row justify-between items-center">
+                    <li><a href="#propos" class="block p-3 font-medium text-sm lg:text-lg text-bleu-fonce duration-500 hover:text-jaune">A propos</a></li>
+                    <li><a href="#projets" class="block p-3 font-medium text-sm lg:text-lg text-bleu-fonce duration-500 hover:text-jaune">Projet</a></li>
+                    <li><a href="#expériences" class="block p-3 font-medium text-sm lg:text-lg text-bleu-fonce duration-500 hover:text-jaune">Expérience</a></li>
+                </ul>
+                <span class="hidden lg:block w-[2px] rounded-full bg-bleu-fonce"></span>
+                <div class="flex flex-row justify-center md:justify-between items-center gap-8">
+                    <a href="mailto:marteellois@gmail.com" target="_blank">
+                        <img src="../assets/communication.png" alt="Gmail Loïs MARTEEL" class="h-8 w-auto hover:scale-125 duration-500">
+                    </a>
+                    <a href="https://www.linkedin.com/in/lo%C3%AFs-marteel-d%C3%A9veloppeur/" target="_blank">
+                        <img src="../assets/techno/LinkedIn.svg" alt="LinkedIn de Loïs MARTEEL" class="h-8 w-auto hover:scale-125 duration-500">
+                    </a>
+                    <a href="https://github.com/Vonaman" target="_blank">
+                        <img src="../assets/techno/github-logo.png" class="w-8 h-auto hover:scale-125 duration-500" alt="Github de Loïs MARTEEL">
+                    </a>
+                </div>
+            </div>
+        </div> 
+        <div class="flex flex-row justify-normal items-end gap-4">
+            <img src="../assets/Monagramme.svg" alt="" class="h-8 w-auto hover:scale-125 duration-500">
+            <p class="font-para font-medium text-sm text-bleu-fonce">
+                Developed by Loïs MARTEEL
+            </p>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+    <script src="src/article.js"></script>
+</body>
+</html>
