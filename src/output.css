@@ -1155,6 +1155,9 @@
   .overflow-y-auto {
     overflow-y: auto;
   }
+  .overflow-y-scroll {
+    overflow-y: scroll;
+  }
   .scroll-auto {
     scroll-behavior: auto;
   }
@@ -2476,6 +2479,11 @@
   .lg\:gap-32 {
     @media (width >= 64rem) {
       gap: calc(var(--spacing) * 32);
+    }
+  }
+  .lg\:overflow-hidden {
+    @media (width >= 64rem) {
+      overflow: hidden;
     }
   }
   .lg\:text-3xl {

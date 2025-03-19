@@ -78,9 +78,9 @@ const body = document.body;
 
 function clickScroll() {
 
-  if (body.classList.contains("overflow-hidden")) {
-    body.classList.remove("overflow-hidden");
-    body.classList.remove("overflow-hidden");
+  if (body.classList.contains("lg:overflow-hidden")) {
+    body.classList.remove("lg:overflow-hidden");
+    body.classList.remove("lg:overflow-hidden");
     console.log(document.body.classList);
 
   }
